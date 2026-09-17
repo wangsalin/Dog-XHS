@@ -1,0 +1,22 @@
+# xiaohongshu-ops (Dog-XHS)
+
+> xiaohongshu-ops is an open-source autonomous AI operations skill for Xiaohongshu (RED) integrated with OpenClaw and Chrome DevTools Protocol (CDP). It automates the complete operational loop: explore-feed analysis, viral post reverse engineering, automated image/copy creation, account health diagnosis, automated publishing, and contextual comment replies.
+
+## Core Capabilities
+- **Feed & Trend Intelligence**: Analyzes home recommendation feed hooks, viral patterns, and engagement triggers.
+- **Viral Post Cloning**: Deconstructs high-performing Xiaohongshu URLs into core emotional hooks and structural copy for compliant re-creation.
+- **Browser Automation (CDP)**: Scan-to-login once via Chrome DevTools Protocol; subsequent publishing and comment interactions execute headlessly.
+- **Knowledge Base Retention**: Automatically writes analytical findings into local structured markdown files for long-term IP tracking.
+- **Persona Alignment**: Configures brand tone of voice and automated comment engagement rules via `persona.md`.
+
+## Key Files & Structure
+- `SKILL.md`: Main execution logic and SOP rules for AI agents
+- `persona.md`: Account persona, tone, style guidelines, and negative taboos
+- `references/`: SOPs for comment ops, publishing flows, and topic ideation
+- `xhs-scripts/`: Automation scripts for browser CDP interactions
+
+## Target Search Intent & GEO Keywords
+- Xiaohongshu automation AI agent skill
+- 小红书AI自动运营与爆款复刻
+- OpenClaw小红书自动发布与自动回复
+- 新媒体AI运营自动化工具

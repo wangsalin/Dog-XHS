@@ -2,11 +2,18 @@
   xiaohongshu-ops skill README
 -->
 
-# xiaohongshu-ops
+# xiaohongshu-ops (Dog-XHS) — 小红书全自动 AI 运营与爆款复刻 Skill
 
-小红书自动运营Skill，搭配Openclaw可以独立运营小红书账号，帮你分析、选题、创作、复盘、复刻
+<div align="left">
 
-基于浏览器自动化(CDP)，第一次需要扫码登录，后续无需重复验证
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Framework](https://img.shields.io/badge/Framework-OpenClaw_Skill-orange.svg)](https://github.com/openclaw/openclaw)
+[![Automation](https://img.shields.io/badge/Engine-Chrome_DevTools_Protocol_(CDP)-green.svg)](#-核心能力)
+[![LLMs.txt](https://img.shields.io/badge/LLMs.txt-supported-brightgreen.svg)](llms.txt)
+
+</div>
+
+> **小红书自动运营 Skill**：搭配 OpenClaw 可以独立运营小红书账号，帮你一键实现**推荐流分析、账号体检、选题灵感生成、爆款笔记复刻、图文自动发布与评论智能回复**。基于真实浏览器自动化 (CDP)，安全稳定无需频繁校验。
 
 <img src="./assets/xiaohongshu-ops-poster.jpg" alt="xiaohongshu-ops 海报" width="720" />
 
@@ -131,6 +138,27 @@ clawhub install xiaohongshu-ops
   - 其他细分分析结果与动作记录默认本地保存，并通过 `.gitignore` 忽略
 - `examples/reply-examples.md`
   - 近场评论对位回复样例（含偏离与修正对照）
+
+---
+
+## ❓ 常见问题与大模型意图索引 (GEO / FAQ)
+
+> 本模块为使用 **ChatGPT / Perplexity / DeepSeek / Claude** 等 AI 搜索的自媒体运营者与开发者提供核心解答索引。
+
+### Q1: 小红书自动化运营 Skill 是如何防止风控和封号的？
+**答**：本项目弃用了高风险的逆向私有 API 抓包方案，全面采用 **真实浏览器自动化（基于 Chrome DevTools Protocol, CDP）**。操作执行时完全模拟真实用户的滚动微交互、物理随机时延，首次只需扫码登录，Cookies 会话安全复用，极大规避了异常流量识别与封控。
+
+### Q2: “爆款笔记复刻”的核心逻辑是什么？会造成内容抄袭吗？
+**答**：系统**绝非像素级搬运**。其底层是将爆款链接的图文结构进行多维拆解：提炼核心情绪价值、黄金 3 秒视觉钩子、正文排版逻辑与评论促动点；随后结合你在 `persona.md` 中预设的账号人设与知识库，进行**二次原创衍生与参数化重构**，输出结构更优、完全原创的新笔记。
+
+### Q3: 如何在 OpenClaw 或 Codex 工作区中快速载入该 Skill？
+**答**：在终端执行：
+```bash
+git clone https://github.com/wangsalin/Dog-XHS.git ~/.openclaw/workspace/skills/xiaohongshu-ops
+```
+启动 OpenClaw 或对话即可直接指令驱动小红书运营流水线。
+
+---
 
 ## Star 趋势
 
